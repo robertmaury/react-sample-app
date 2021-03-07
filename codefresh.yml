@@ -38,7 +38,7 @@ steps:
     arguments:
       kind: kubernetes
       cluster: digitalOcean@codefresh-test
-      namespace: dev
+      namespace: test
       service: react-sample-app
       candidate:
         image: daquinox/react-sample-app:with-nginx
