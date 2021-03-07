@@ -34,7 +34,7 @@ steps:
     description: react-dev
     title: react-dev
     fail_fast: true
-    stage: dev
+    stage: deploy
     arguments:
       kind: kubernetes
       cluster: digitalOcean@codefresh-test
