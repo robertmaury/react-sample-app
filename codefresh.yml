@@ -3,6 +3,7 @@ stages:
   - prepare
   - test
   - build
+  - deploy  
 steps:
   main_clone:
     title: Cloning main repository...
@@ -28,3 +29,17 @@ steps:
     working_directory: ./
     tag: 'with-nginx'
     dockerfile: Dockerfile
+  deploy:
+    type: deploy
+    description: react-dev
+    title: react-dev
+    fail_fast: true
+    stage: dev
+    arguments:
+      kind: kubernetes
+      cluster: digitalOcean@codefresh-test
+      namespace: dev
+      service: react-sample-app
+      candidate:
+        image: '${{build_step}}'
+        registry: dockerhub
