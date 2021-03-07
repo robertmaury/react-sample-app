@@ -41,5 +41,5 @@ steps:
       namespace: dev
       service: react-sample-app
       candidate:
-        image: '${{build_step}}'
+        image: daquinox/react-sample-app
         registry: dockerhub
