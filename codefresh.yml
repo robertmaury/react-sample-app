@@ -42,4 +42,4 @@ steps:
       service: react-sample-app
       candidate:
         image: daquinox/react-sample-app:with-nginx
-        registry: codefresh
+        registry: dockerhub
